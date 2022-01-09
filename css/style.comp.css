@@ -1,0 +1,278 @@
+.button:link, .button:visited {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.375rem;
+  background: linear-gradient(90deg, #000 79%, #d5966c 21%);
+  color: #fff;
+  display: inline-block;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+  position: relative; }
+
+.button--right {
+  position: absolute;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  transform: translateY(0.3rem); }
+  .button--right path {
+    stroke: #fff; }
+
+.button:hover {
+  background: linear-gradient(90deg, #d5966c 79%, #000 21%); }
+
+.button--location {
+  position: relative;
+  border: 1px solid #333; }
+  .button--location:link, .button--location:visited {
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.375rem;
+    background: linear-gradient(90deg, #000 21%, #d5966c 21%);
+    color: #fff;
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 3rem;
+    cursor: pointer; }
+  .button--location--left {
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-0.9rem, 0.3rem); }
+    .button--location--left path {
+      stroke: #fff; }
+  .button--location:hover {
+    background: linear-gradient(90deg, #d5966c 21%, #000 21%); }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+.container {
+  display: grid;
+  grid-template-rows: 90vh min-content 22rem; }
+
+.header {
+  height: 50vh; }
+  .header__main__title {
+    background: linear-gradient(90deg, #000 30%, #fff 0%); }
+  .header__main__position {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    justify-items: center;
+    background: linear-gradient(90deg, #000 62%, #fff 42%); }
+    .header__main__position--img {
+      margin: 0 auto;
+      width: 54rem;
+      grid-column: 2 / 3;
+      grid-row: 1 / 1; }
+    .header__main__position--h1 {
+      font-family: "Big Shoulders Display", cursive;
+      text-transform: uppercase;
+      font-size: 9.6rem;
+      font-weight: 900;
+      line-height: 0.9;
+      background: linear-gradient(90deg, #fff 63%, #000 42%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      grid-column: 2 / 3;
+      grid-row: 1 / 1;
+      transform: translate(-32.7rem, 19rem); }
+    .header__main__position--location {
+      display: flex;
+      flex-direction: column;
+      gap: 7rem;
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      transform: translate(-25rem, 14rem);
+      padding: 5rem; }
+      .header__main__position--location--p {
+        font-size: 2.2rem;
+        width: 35rem;
+        color: #444444;
+        font-family: "Outfit", sans-serif; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 43rem;
+  grid-template-rows: min-content 1fr 1fr;
+  gap: 3rem;
+  max-width: 120rem;
+  align-items: center;
+  margin: 0 auto; }
+  .gallery__top {
+    max-width: 31rem;
+    grid-column: 1 / span 2; }
+    .gallery__top--text {
+      font-family: "Big Shoulders Display", cursive;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 6rem;
+      line-height: 1;
+      color: #000;
+      margin-bottom: 3rem; }
+    .gallery__top--description {
+      font-family: "Outfit", sans-serif;
+      font-size: 2.2rem;
+      line-height: 1.4; }
+  .gallery__img-1 {
+    width: 100%;
+    grid-column: 4 / 6; }
+  .gallery__img-2 {
+    width: 100%;
+    height: 100%;
+    grid-row: 2 / 4;
+    grid-column: 1 / 5;
+    object-fit: cover; }
+  .gallery__img-3 {
+    width: 43rem;
+    height: 100%;
+    grid-row: 2 / 3;
+    grid-column: 5 / 6;
+    object-fit: cover; }
+  .gallery__bottom {
+    background-color: #000;
+    color: #cccccc;
+    padding: 6rem 4rem;
+    max-width: 43rem;
+    height: 100%;
+    grid-row: 3 / 4;
+    grid-column: 5 / 6;
+    align-self: flex-end; }
+    .gallery__bottom--text {
+      font-family: "Big Shoulders Display", cursive;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 6rem;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 3rem; }
+    .gallery__bottom--description {
+      font-family: "Outfit", sans-serif;
+      font-size: 2.2rem;
+      line-height: 1.4; }
+
+#map {
+  height: 55vh; }
+
+.location {
+  position: relative; }
+  .location__button {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    z-index: 999; }
+
+.address {
+  height: 55rem;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 10rem 20rem;
+  position: relative; }
+  .address__heading {
+    color: #fff;
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transform: translateY(-1rem);
+    line-height: 0.9; }
+  .address__location {
+    width: 54rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; }
+    .address__location__place {
+      font-size: 2.2rem;
+      font-family: "Outfit", sans-serif;
+      line-height: 3.2rem;
+      font-style: normal;
+      display: flex;
+      flex-direction: column; }
+      .address__location__place--street {
+        font-size: 3.6rem;
+        font-weight: 900;
+        font-family: "Big Shoulders Display", cursive;
+        color: #d5966c;
+        font-style: normal;
+        text-transform: uppercase; }
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 10rem; }
+  .footer__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-family: "Big Shoulders Display", cursive; }
+  .footer__text {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.8rem;
+    max-width: 43rem;
+    color: #cccccc;
+    line-height: 1.4;
+    margin-left: 20%;
+    margin-right: auto; }
+  .footer__links {
+    display: flex;
+    gap: 2rem;
+    align-self: flex-start; }
+    .footer__links svg {
+      cursor: pointer; }
+
+.footer__links--1:hover path, .footer__links--2:hover path, .footer__links--3:hover path {
+  fill: #d5966c; }
+
+.location__footer {
+  background-color: #d5966c;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 10rem; }
+  .location__footer__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-family: "Big Shoulders Display", cursive; }
+  .location__footer__text {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.8rem;
+    max-width: 43rem;
+    color: #222;
+    line-height: 1.4;
+    margin-left: 20%;
+    margin-right: auto; }
+  .location__footer__links {
+    display: flex;
+    gap: 2rem;
+    align-self: flex-start;
+    color: #000; }
+    .location__footer__links svg {
+      cursor: pointer; }
+
+.location__footer__links--1:hover path, .location__footer__links--2:hover path, .location__footer__links--3:hover path {
+  fill: #fff; }
